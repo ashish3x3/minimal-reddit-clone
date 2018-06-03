@@ -17,6 +17,26 @@ const postReducer = (state = [], action) => {
 							}
 						} else return post;
 						})
+		case 'UPVOTE':
+			console.log('Upvoted');
+			return state.map((post)=>{
+			        if(post.id === action.id) {
+			          return {
+			             ...post,
+			             voteCount: post.voteCount + 1
+			          }
+			        } else return post;
+			      })
+		case 'DOWNVOTE':
+			console.log('downvoted');
+			return state.map((post)=>{
+			    	        if(post.id === action.id) {
+			    	          return {
+			    	             ...post,
+			    	             voteCount: post.voteCount - 1
+			    	          }
+			    	        } else return post;
+			    	      })
 		default:
 			return state;
 	}

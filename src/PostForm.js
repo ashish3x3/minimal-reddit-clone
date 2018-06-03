@@ -9,7 +9,8 @@ e.preventDefault();
   id: new Date(),
   title,
   message,
-  editing: false
+  editing: false,
+  voteCount: 0
  }
  this.props.dispatch({
  type: 'ADD_POST',
