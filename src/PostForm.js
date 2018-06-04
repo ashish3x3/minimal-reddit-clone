@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-class PostForm extends Component {
+export class PostForm extends Component {
+
+	constructor(props) {
+	    super(props);
+	    this.handleSubmit = this.handleSubmit.bind(this);
+	  }
+
+
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const title = this.getTitle.value;
