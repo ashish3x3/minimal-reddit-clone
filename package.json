@@ -1,7 +1,9 @@
 {
   "name": "minimal-reddit-clone",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "This repository contains a very minimalist version of a Reddit. This allows user to Post a new content and perform Create,Read,Update and Delete operation along with up-vote and down-votes any posted content",
   "private": true,
+  "author": "Ashish Singh",
   "dependencies": {
     "react": "15.5.0",
     "react-dom": "15.5.0",
@@ -30,5 +32,8 @@
     "redux-mock-store": "1.5.1",
     "webpack": "3.4.1",
     "webpack-dev-server": "2.6.1"
+  },
+  "engines": {
+    "node": "8.9.1"
   }
 }
