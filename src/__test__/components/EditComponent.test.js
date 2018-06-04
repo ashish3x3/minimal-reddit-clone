@@ -49,7 +49,6 @@ describe('EditComponent Component', () => {
 
 	    wrapper.find('input[name="title"]').simulate('change', changeEventTitle);
 	    wrapper.find('textarea').simulate('change', changeEventContent);
-	    console.log(wrapper.find('textarea').props);
 
 		wrapper.find('.form').simulate('submit',{preventDefault() {}});
 		expect(dispatchMock).toHaveBeenCalled();
