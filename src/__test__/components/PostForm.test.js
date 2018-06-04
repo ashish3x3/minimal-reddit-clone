@@ -24,39 +24,19 @@ describe('PostForm Component', () => {
 	let expectedAction =  { type: 'ADD_POST'}
 	let dispatchMock = jest.fn();
 
+	const mockProps = {
+	    submitMessageHandler: jest.fn(),
+	};
+
+	afterEach(() => {
+	    mockProps.submitMessageHandler.mockReset();
+	});
+
 	beforeEach(() => {
 
 		wrapper = shallow(<PostForm store = {store} dispatch={dispatchMock}/>);
 
 	});
-
-	// it('dispatch should get invoked on form submit', () => {
-	// 	const expectedAction = { type: 'UPDATE', id: props.post.id, data: props.post };
-
-	// 	// Simulate typing text into the name input.
-	//     const title = 'random title';
-	//     const changeEventTitle = {
-	//       target: { name: 'getTitle', value: title },
-	//     };
-
-	//     const content = 'random content';
-	//     const changeEventContent = {
-	//       target: { name: 'getMessage', value: content },
-	//     };
-
-	//     wrapper.find('input').simulate('change', changeEventTitle);
-	//     wrapper.find('textarea').simulate('change', changeEventContent);
-	//     console.log(wrapper.find('textarea').props);
-
-	// 	wrapper.find('.form').simulate('submit',{preventDefault() {}});
-	// 	expect(dispatchMock).toHaveBeenCalled();
-	// });
-
-	//  // it('handleEdit function should get called on form submit', () => {
-	// 	// wrapper.find('.form').simulate('submit',{preventDefault() {}});
-	// 	// expect(dispatchMock).toHaveBeenCalled();
-
-	// });
 
 	it('form should render without crashing', () => {
 		expect(wrapper.find('.post-container').length).toEqual(1);
