@@ -28,8 +28,8 @@ export class EditComponent extends Component {
 		// const newTitle = this.getTitle.value;
 		// const newMessage = this.getMessage.value;
 		const data = {
-			'newTitle':this.newTitle,
-			'newMessage':this.newMessage
+			'newTitle':this.newTitle || this.props.post.title,
+			'newMessage':this.newMessage || this.props.post.message
 		}
 
 		this.props.dispatch({ type: 'UPDATE', id: this.props.post.id, data: data })
