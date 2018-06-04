@@ -11,7 +11,6 @@ import { shallow, mount, render } from 'enzyme';
 import { Post } from '../../Post';
 import configureStore from 'redux-mock-store';
 import TestUtils from 'react-dom/test-utils';
-import sinon from 'sinon';
 
 const mockStore = configureStore();
 
