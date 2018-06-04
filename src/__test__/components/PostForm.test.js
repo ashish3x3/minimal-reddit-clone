@@ -30,27 +30,27 @@ describe('PostForm Component', () => {
 
 	});
 
-	it('dispatch should get invoked on form submit', () => {
-		const expectedAction = { type: 'UPDATE', id: props.post.id, data: props.post };
+	// it('dispatch should get invoked on form submit', () => {
+	// 	const expectedAction = { type: 'UPDATE', id: props.post.id, data: props.post };
 
-		// Simulate typing text into the name input.
-	    const title = 'random title';
-	    const changeEventTitle = {
-	      target: { name: 'getTitle', value: title },
-	    };
+	// 	// Simulate typing text into the name input.
+	//     const title = 'random title';
+	//     const changeEventTitle = {
+	//       target: { name: 'getTitle', value: title },
+	//     };
 
-	    const content = 'random content';
-	    const changeEventContent = {
-	      target: { name: 'getMessage', value: content },
-	    };
+	//     const content = 'random content';
+	//     const changeEventContent = {
+	//       target: { name: 'getMessage', value: content },
+	//     };
 
-	    wrapper.find('input').simulate('change', changeEventTitle);
-	    wrapper.find('textarea').simulate('change', changeEventContent);
-	    console.log(wrapper.find('textarea').props);
+	//     wrapper.find('input').simulate('change', changeEventTitle);
+	//     wrapper.find('textarea').simulate('change', changeEventContent);
+	//     console.log(wrapper.find('textarea').props);
 
-		wrapper.find('.form').simulate('submit',{preventDefault() {}});
-		expect(dispatchMock).toHaveBeenCalled();
-	});
+	// 	wrapper.find('.form').simulate('submit',{preventDefault() {}});
+	// 	expect(dispatchMock).toHaveBeenCalled();
+	// });
 
 	//  // it('handleEdit function should get called on form submit', () => {
 	// 	// wrapper.find('.form').simulate('submit',{preventDefault() {}});
@@ -58,27 +58,23 @@ describe('PostForm Component', () => {
 
 	// });
 
-	// it('form should get rendered without crash', () => {
-	// 	expect(wrapper.find('.post').length).toEqual(1)
-	// })
+	it('form should render without crashing', () => {
+		expect(wrapper.find('.post-container').length).toEqual(1);
+	})
 
-	// it('form should have input field', () => {
-	// 	expect(wrapper.find('input').length).toEqual(1)
-	// })
+	it('form should have form element', () => {
+		expect(wrapper.find('form').length).toEqual(1);
+	})
 
-	// it('form should have button', () => {
-	// 	expect(wrapper.find('button').length).toEqual(1)
-	// })
+	it('form should have input', () => {
+		expect(wrapper.find('input').length).toEqual(1);
+	})
 
-	// it('default value of title should be props.post.title', () => {
-	// 	const erp = wrapper.find('input').prop('defaultValue');
-	// 	expect(erp).toEqual(props.post.title);
+	it('form should have textarea', () => {
+		expect(wrapper.find('textarea').length).toEqual(1);
+	})
 
-	// })
-
-	// it('default value of content should be props.post.message', () => {
-	// 	const erp = wrapper.find('textarea').prop('defaultValue');
-	// 	expect(erp).toEqual(props.post.message);
-
-	// })
+	it('form should have button', () => {
+		expect(wrapper.find('button').length).toEqual(1);
+	})
 });
