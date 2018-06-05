@@ -14,19 +14,15 @@ export class EditComponent extends Component {
 
 
 	onChangeTitle = (e) => {
-		// e.preventDefault();
 		this.newTitle = e.target.value;
 	}
 
 	onChangeContent = (e) => {
-		// e.preventDefault();
 		this.newMessage = e.target.value;
 	}
 
 	handleEdit = (e) => {
 		e.preventDefault();
-		// const newTitle = this.getTitle.value;
-		// const newMessage = this.getMessage.value;
 		const data = {
 			'newTitle':this.newTitle || this.props.post.title,
 			'newMessage':this.newMessage || this.props.post.message

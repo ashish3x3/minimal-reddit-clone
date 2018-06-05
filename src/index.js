@@ -6,8 +6,14 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 
-import postReducer from './reducers/postReducer';
-const store = createStore(postReducer);
+// import postReducer from './reducers/postReducer';
+
+import rootReducer from './reducers';
+
+
+
+const store = createStore(rootReducer);
+
 ReactDOM.render(
 	<Provider store={store}>
 	<App />
