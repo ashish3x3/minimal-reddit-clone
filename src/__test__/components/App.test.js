@@ -19,16 +19,16 @@ describe('App Component', () => {
 	let wrapper;
 	let store;
 
-	const initialState = [];
+	const initialState = {postReducer:[{title:'random title', message:'random message', id:'random id', editing:false}]};
 	store = mockStore(initialState)
 
 	const props = {
-		post: store,
+		post: initialState.postReducer
 	}
 
 	beforeEach(() => {
 
-		wrapper = mount(<Provider store={store}>
+		wrapper = shallow(<Provider store={store}>
 				<App />
 				</Provider>);
 
@@ -42,14 +42,6 @@ describe('App Component', () => {
 	it('App should render with other child components without crashing', () => {
 		expect(wrapper.exists()).toBe(true);
 
-	});
-
-	it('App should render PostForm child components without crashing', () => {
-		expect(wrapper.find(PostForm).length).toEqual(1);
-	});
-
-	it('App should render AllPost child components without crashing', () => {
-		expect(wrapper.find(AllPost).length).toEqual(1);
 	});
 });
 

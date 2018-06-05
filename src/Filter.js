@@ -1,37 +1,19 @@
+import React from 'react';
+import FilterLink from './containers/FilterLink';
+import { VisibilityFilters } from './actions';
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-
-class Filter extends Component {
-
-	render() {
-		return (
-				<div className="filterContainer">
-				    <button className="fa fa-list-alt post-control-buttons boxItem"
-			        		onClick={() => this.props.dispatch({ type: 'SHOW_ALL'})}>
-			    		Show All
-			    	</button>
-
-				    <button className="fa fa-arrow-down post-control-buttons boxItem"
-			        		onClick={() => this.props.dispatch({ type: 'TOP20'})}>
-			    		Top 20 Posts
-			    	</button>
-
-				    <button className="fa fa-check post-control-buttons boxItem"
-			        		onClick={() => this.props.dispatch({ type: 'TOP5'})}>
-			    		Top 5 Posts
-			    	</button>
-				  </div>
-			)
-	}
-}
-
-const mapStateToProps = (state) => {
-	return {
-		posts: state
-	}
-}
-
-export default connect(mapStateToProps)(Filter);
-
+export const Filter = () => (
+  <div>
+  	<div className="filterContainer">
+	    <FilterLink filter={VisibilityFilters.SHOW_ALL}>
+	      All Post
+	    </FilterLink>
+	    <FilterLink filter={VisibilityFilters.SHOW_TOP20}>
+	      Top 20 Posts
+	    </FilterLink>
+	    <FilterLink filter={VisibilityFilters.SHOW_MY_POST}>
+	      My Posts
+	    </FilterLink>
+	</div>
+  </div>
+)

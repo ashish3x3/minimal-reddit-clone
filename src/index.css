@@ -27,7 +27,7 @@ a:hover {
 .navbar {
 	background:#fff;
 	text-align:center;
-	padding:1.5rem 0;
+	/*padding:1.5rem 0;*/
 	width:100%;
 	display:flex;
 	justify-content: center;
@@ -48,8 +48,9 @@ a:hover {
 /* Post Styles */
 .post-container {
 	background:#fff;
-	padding:50px;
+	/*padding:50px;*/
 	width:50%;
+	padding-bottom: 20px;
 	margin:40px auto;
 	box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
 	font-family:'Work Sans',sans-serif;
@@ -59,7 +60,7 @@ a:hover {
 .post_heading {
 	text-align:center;
 	font-weight:400;
-	font-size:40px;
+	font-size:30px;
 	color:#636363;
 }
 
@@ -181,7 +182,7 @@ a:hover {
 	background: #ff7777;
 }
 
-.delete:hover {
+.active, .delete:hover {
 	background-color: #c51c1c
 }
 
@@ -276,4 +277,10 @@ a:hover {
 .filterContainer {
 	text-align: center;
 	margin-bottom: 30px;
+}
+
+.active {
+	background-color: #463f41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }

@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
 export class PostForm extends Component {
 
 	constructor(props) {
 	    super(props);
 	    this.handleSubmit = this.handleSubmit.bind(this);
-	  }
+	    this._onKeyPress = this._onKeyPress.bind(this);
+	  };
 
+	_onKeyPress = (e) => {
+	  	if(e.target.value.length > 9) {
+	  		alert('Content text should not exceed 256 character');
+	  	}
+	}
 
 	handleSubmit = (e) => {
 		e.preventDefault();
@@ -37,8 +42,8 @@ export class PostForm extends Component {
 			<form className="form" onSubmit={this.handleSubmit} >
 				<input required type="text" ref={(input) => this.getTitle = input}
 						placeholder="Enter Post Title" /><br /><br />
-				<textarea required rows="5" ref={(input) => this.getMessage = input}
-						cols="28" placeholder="Enter Post" /><br /><br />
+				<textarea maxLength="256" required rows="5" ref={(input) => this.getMessage = input}
+						cols="28" placeholder="Enter Post" onKeyPress={this._onKeyPress} /><br /><br />
 				<button>Post</button>
 			</form>
 		</div>
