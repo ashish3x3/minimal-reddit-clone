@@ -1,3 +1,5 @@
+
+/* This act as a Data container which gets the data depending on state and filter and then pass it to AllPost component to display it */
 import { connect } from 'react-redux'
 import AllPost from '../AllPost';
 import { VisibilityFilters } from '../actions'
@@ -15,6 +17,7 @@ export const getVisiblePosts = (posts, filter) => {
 	}
 }
 
+/* Matching states contained inside our store to posts*/
 const mapStateToProps = state => ({
 	posts: getVisiblePosts(state.postReducer, state.visibilityFilter)
 })

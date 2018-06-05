@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
+/* This component has been deprecated. It was the first try to build an inline filter which dosen't work the way intended. Leter I moved to adding another reducer to our store same as done by todoApp demo shown on redux.com It has button for all the three filters which on click dispatch action for reducer to take action.*/
 class Filters extends Component {
 
 	render() {

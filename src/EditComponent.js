@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
+/* This component is used to disply the topics for editing once someone clicks on edit topic on the screen. It enables the variable editing:true in the state of the topic in context.*/
 export class EditComponent extends Component {
+
+	/* Constrcutor is responsible for binding all these mentioned function to this instance.*/
 	constructor(props) {
 	    super(props);
 	    this.handleEdit = this.handleEdit.bind(this);
@@ -12,15 +14,16 @@ export class EditComponent extends Component {
 	    this.newMessage;
 	  }
 
-
+	  /* on change hadler for title change*/
 	onChangeTitle = (e) => {
 		this.newTitle = e.target.value;
 	}
-
+	/* on change handler for content change*/
 	onChangeContent = (e) => {
 		this.newMessage = e.target.value;
 	}
 
+	/* handle edit is called on submit of the update form. It checks if any new data has been entered for title or content. If it finds that the data is indeed modified it replaces the earlier data with the new one and dispacth the UPDATE event.*/
 	handleEdit = (e) => {
 		e.preventDefault();
 		const data = {

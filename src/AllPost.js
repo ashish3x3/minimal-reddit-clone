@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Post from './Post';
 import EditComponent from './EditComponent';
 
+/* This Component simply dumps the data it receive from component VisiblePostList onto screen with help of other components like EditComponent and Post component. It also checks whether the topic is cliked for update or not. In that scenario it prints EditCOmponent onto screen*/
 class AllPost extends Component {
 	render() {
 		return (
