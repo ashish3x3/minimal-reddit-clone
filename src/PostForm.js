@@ -10,7 +10,7 @@ export class PostForm extends Component {
 	  };
 
 	_onKeyPress = (e) => {
-	  	if(e.target.value.length > 9) {
+	  	if(e.target.value.length > 255) {
 	  		alert('Content text should not exceed 256 character');
 	  	}
 	}
