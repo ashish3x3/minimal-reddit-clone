@@ -1,4 +1,9 @@
+
+/* Test class for EditComponent Component*/
+
 import React from 'react';
+
+/* This is bare minimum requirement for using Enzyme for testing */
 const Enzyme = require('enzyme');
 const EnzymeAdapter = require('enzyme-adapter-react-15');
 Enzyme.configure({ adapter: new EnzymeAdapter() });
@@ -8,15 +13,20 @@ import { EditComponent } from '../../EditComponent';
 import configureStore from 'redux-mock-store';
 import TestUtils from 'react-dom/test-utils';
 
+/* creating a mock store to replication redux store concept in testing. Thsi will act as a source of truth of our testing.*/
 const mockStore = configureStore();
 
 describe('EditComponent Component', () => {
 	let wrapper;
 	let store;
 
+	/* creating initial state of our application for testing */
 	const initialState = [{title:'random title', message:'random message', id:'random id'}];
+
+	/* Creating a dummy callback function for testing event handlers. Jest provides a way to spy on named methods from components */
 	const myFnProp = jest.fn();
 
+	/* passing initial state to the store */
 	store = mockStore(initialState)
 
 	const props = {
@@ -25,6 +35,8 @@ describe('EditComponent Component', () => {
 	}
 	let dispatchedAction;
 	let expectedAction =  { type: 'UPDATE'}
+
+	/* created a dummy dispatch function. This is required because dispatch won't be availabe during shallow testing or unit testing of the compoent. Dispatch is available during integration testing where we test multiple components working together. */
 	let dispatchMock = jest.fn();
 
 	beforeEach(() => {

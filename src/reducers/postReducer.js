@@ -1,3 +1,5 @@
+
+/* This will act as a state manager for anything we do with topics like creating a topics,editing and deleting.All those operation has to go through this post reducer. This will make sure that our app has predictable data flow and at any point store has the latest value based on any amount of operations perfomed within our app */
 const postReducer = (state = [], action) => {
 	switch (action.type) {
 		case 'ADD_POST':

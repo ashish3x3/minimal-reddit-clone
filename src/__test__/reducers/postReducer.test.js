@@ -1,4 +1,6 @@
 
+/* Testing Post reducer. Arguably the most the important component of our app. This takes care of all the CRUD operation we perform on topics including Upvotes and Downvotes are all handled through this. */
+
 import postReducer from '../../reducers/postReducer';
 
 

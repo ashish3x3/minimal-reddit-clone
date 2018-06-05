@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+/* This component displays the inserted topics along with buttons to perfom various operation on them like upvotes,downvotes,edit and delete */
 export class Post extends Component {
 	render() {
 		return (
