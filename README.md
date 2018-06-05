@@ -16,7 +16,7 @@ Step 4: Run **jest test** to test if all test cases are passing
 
 Step 4.1: It should similar to this image
 
-![Test Build](public/images/Test-Cases-Passing-after each-modification.PNG?raw=true "Test Build")
+![Test Build](public/images/Test-Cases-Passing-after-each-modification.PNG?raw=true "Test Build")
 
 Step 5: In your terminal type 'npm start' to start the node server
 
