@@ -12,7 +12,7 @@ Step 1: Clone the repository https://github.com/ashish3x3/minimal-reddit-clone.g
 
 Step 2: Go to root of your downloaded repository in command-prompt or whatever terminal you prefer
 
-Step 4: Run jest test to test if all test cases are passing
+Step 4: Run **jest test** to test if all test cases are passing
 
 Step 4.1: It should similar to this image
 
