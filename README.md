@@ -18,15 +18,15 @@ Step 4.1: It should similar to this image
 
 ![Test Build](public/images/Test-Cases-Passing-after-each-modification.PNG?raw=true "Test Build")
 
-Step 5: In your terminal type 'npm start' to start the node server
+Step 5: In your terminal type **'npm start'** to start the node server
 
 Step 6: If all goes good ,you will be directed to a URL: http://localhost:3000/. Port 3000 could be different depending if any other service is running there.
 
 Step 7: Navigate around the app
 
-Step 8: If you want to host it on any other platform than localhost.
+Step 8: If you want to try and host this source on any other platform than localhost. Follow the steps below
 
-Step 8.1: Go to terminal and run 'npm build'. This command will give you a 'build file' for hosting over any other servers
+Step 8.1: Go to terminal and run **'npm build'**. This command will give you a **'build file bundle.js'** for hosting over any other servers
 
 # Build running on Heroku
 
