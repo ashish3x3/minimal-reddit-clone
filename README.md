@@ -76,6 +76,8 @@ Features:
 
 7. Comprehensive test cases is provided for the components
 
+8. For unit testing components and flow a combination of Jest+Enzyme framework is used
+
 
 
 # Challenges faced:
